@@ -14,3 +14,4 @@ b. Type "./start.sh" in the command line to start the docker and build the appli
 
 c. Type "./stop.sh" in the command line to stop the docker.
 
+Access the application at http://localhost:8080/swagger-ui/index.html for testing the API
