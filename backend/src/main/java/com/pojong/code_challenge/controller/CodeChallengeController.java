@@ -24,13 +24,13 @@ public class CodeChallengeController {
         return codeChallengeService.create(query);
     }
 
-    @GetMapping( "/getTrackMetadata/{src}")
-    public Mono<MetadataDto> getTrackMetadata(@PathVariable final String src) {
+    @GetMapping("/getTrackMetadata")
+    public Mono<MetadataDto> getTrackMetadata(@RequestParam(value = "src", required = true, defaultValue = "USMC18620549") String src) {
         return codeChallengeService.getMetadata(src);
     }
 
-    @GetMapping("/getCover/{src}")
-    public Mono<ResponseEntity<Resource>> getCover(@PathVariable String src) {
+    @GetMapping("/getCover")
+    public Mono<ResponseEntity<Resource>> getCover(@RequestParam(value = "src", required = true, defaultValue = "USMC18620549") String src) {
         return codeChallengeService.getImageData(src)
                 .map(imageData -> {
                     ByteArrayResource resource = new ByteArrayResource(imageData);

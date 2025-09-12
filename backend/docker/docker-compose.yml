@@ -27,7 +27,7 @@ services:
 
   code_challenge:
     build:
-      context: ../..
+      context: ../
     depends_on:
       - postgres
     image: code_challenge

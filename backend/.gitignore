@@ -1,0 +1,41 @@
+# IntelliJ IDEA
+../.idea/
+*.iml
+*.iws
+*.ipr
+out/
+target/
+.vscode/ # If using VSCode alongside IntelliJ
+
+# Build artifacts
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.gz
+hs_err_pid*
+
+# Maven
+/target/
+
+# Gradle
+.gradle/
+build/
+
+# Docker
+.dockerignore
+!Dockerfile # Ensure Dockerfile is not ignored if .dockerignore is present
+docker-compose.override.yml # Often used for local development, not committed
+*.log
+tmp/
+temp/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Other
+.classpath
+.project
+.settings/
