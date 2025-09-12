@@ -26,3 +26,5 @@ b. Type "npm run build" in the command line for building the application.
 c. Type "npm run dev" in the command line to start the application.
 
 Access the application at http://localhost:3000 for testing the API
+
+[![Watch the video]](https://github.com/pojong/code_challenge/blob/main/sample_application.webm)
