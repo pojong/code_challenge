@@ -41,7 +41,7 @@ export const deleteTrackFn = async (queryString: string) => {
 };
 
 export const getSingleTrackFn = async (isrc: string) => {
-  const response = await trackMetadataApi.get<ITrackMetadata>(`getTrackMetadata?isrc=${isrc}`);
+  const response = await trackMetadataApi.get<ITrackMetadata>(`getTrackMetadata?src=${isrc}`);
   return response.data;
 };
 
@@ -52,7 +52,7 @@ export const getTracksFn= async (): Promise<ITrackMetadata[]> => {
   };
 
 export const searchAndReadFn = async (isrc: string) => {
-  const response = await trackMetadataApi.post<IGenericResponse>("createTrack/", isrc);
+  const response = await trackMetadataApi.get(`createTrack?query=${isrc}`);
   const track = await getSingleTrackFn(isrc);
   addItemInLocalStorage(track);
   return track;

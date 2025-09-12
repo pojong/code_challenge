@@ -19,8 +19,8 @@ public class CodeChallengeController {
 
     private final CodeChallengeService codeChallengeService;
 
-    @PostMapping
-    public Mono<Boolean> create(String query) {
+    @GetMapping("/createTrack")
+    public Mono<Boolean> create(@RequestParam(value = "query", required = true, defaultValue = "USMC18620549") String query) {
         return codeChallengeService.create(query);
     }
 
